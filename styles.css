@@ -1,0 +1,565 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 100px;
+    padding: 0;
+    background: rgb(171, 110, 40);
+    background: linear-gradient(90deg, rgb(226, 110, 9) 0%, rgb(230, 193, 130) 74%, rgb(210, 195, 151) 91%);
+    font-family: 'Poppins', sans-serif;
+    animation: expand .8s ease forwards;
+  }
+  
+  .navigation {
+    color: #000000;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: expand .8s ease forwards;
+  }
+  
+  .menu-toggle {
+    display: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 15px;
+    color: #000000;
+    animation: expand .8s ease forwards;
+  }
+  
+  .menu-toggle:hover {
+    background-color: #f0f0f0;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    animation: expand .8s ease forwards;
+  }
+  
+  ul li {
+    margin: 0 10px;
+  }
+  
+  ul li:not(:last-child) {
+    margin-right: 20px;
+  }
+  
+  ul li a {
+    text-decoration: none;
+    color: #000000;
+    background-color: transparent;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s;
+  }
+  
+  ul li a:hover {
+    color: #0368ff;
+    background-color: #ffffff;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+      margin-right: 15px;
+    }
+  
+    ul {
+      flex-direction: column;
+      align-items: center;
+      display: none;
+      padding: 10px 0;
+    }
+  
+    ul.active {
+      display: flex;
+    }
+  
+    ul li {
+      margin: 10px 0;
+    }
+  }
+  
+  .portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the cards horizontally */
+    align-items: center; /* Center the cards vertically */
+    gap: 20px;
+    padding: 20px;
+    animation: expand .8s ease forwards;
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    margin-top: 50px;
+    text-align: center;
+    animation: expand .8s ease forwards;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card,
+  .card#about,
+  .card#education,
+  .card#experience,
+  .card#projects,
+  .card#skills {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    animation: expand .8s ease forwards;
+    padding-bottom: 20px;
+    margin-top: 50px;
+    text-align: center;
+    height: 25rem;
+    width: 50%;
+    align-items: center;
+  }
+
+ .card#about{
+    margin-bottom: 20px;
+    height: 28rem;
+ }
+
+  .card#education{
+     
+    overflow-y: auto;
+  }
+
+  .card#skills{
+    overflow-y: auto;
+  }
+ 
+  .card#projects{
+    overflow-y: auto;
+  }
+
+  .card#certification{
+    overflow-y: auto;
+  }
+
+   
+  
+  .avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    margin: 20px auto;
+    display: block;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.0);
+  }
+  
+  .avatar:hover {
+    transform: scale(1.2);
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .card h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .card p {
+    margin: 0;
+    color: #666;
+  }
+  
+  .card .card-content p {
+    max-height: 150px;
+    overflow-y: auto;
+    
+  }
+  
+  .card-footer {
+    background-color: #f0f0f0;
+    padding: 15px 0;
+  }
+  
+  .card#education,
+  .card#experience,
+  .card#projects,
+  .card#skills {
+    background-color: #f9f9f9;
+  }
+  
+  .card#education h3,
+  .card#experience h3,
+  .card#projects h3,
+  .card#skills h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .card#education .education-entry,
+  .card#experience .education-entry,
+  .card#projects .education-entry,
+  .card#skills .education-entry {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .card#education .education-entry h4,
+  .card#experience .education-entry h4,
+  .card#projects .education-entry h4,
+  .card#skills .education-entry h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+  }
+  
+  .card#education .education-entry p,
+  .card#experience .education-entry p,
+  .card#projects .education-entry p,
+  .card#skills .education-entry p {
+    margin: 0;
+    color: #666;
+    line-height: 1.5;
+    font-size: 1rem;
+  }
+  
+  .card#education .education-entry:not(:last-child),
+  .card#experience .education-entry:not(:last-child),
+  .card#projects .education-entry:not(:last-child),
+  .card#skills .education-entry:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: expand .8s ease forwards;
+  }
+  
+  .icon-link {
+    margin: 10px;
+    font-size: 24px;
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .icon-link:hover {
+    color: #ffffff;
+    transform: scale(1.2);
+  }
+  
+  .ju {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(500px) scale(.2);
+    }
+    100% {
+      transform: translateX(0px) scale(1);
+    }
+  }
+  
+  @keyframes slideUp {
+    0% {
+      transform: translateY(300px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  @keyframes expand {
+    0% {
+      transform: translateX(1400px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+  
+ 
+ 
+ /* Default styles for skills */
+.column-skills {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    max-height: 150px; /* Set a maximum height for the skills container */
+    overflow-y: auto; /* Add a vertical scrollbar when needed */
+}
+
+.column-skills li {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.skill-icon {
+    color: #000000;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.skill-text {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Hover effect for skills */
+.column-skills li:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .experience-entry {
+        display: block; /* Display each entry as a block on smaller screens */
+        margin-bottom: 20px;
+    }
+
+    .column-skills {
+        max-height: 200px; /* Set a maximum height for the skills container on smaller screens */
+        overflow-y: auto; /* Add a vertical scrollbar when needed */
+        padding-right: 10px; /* Add some right padding to account for scrollbar width */
+    }
+
+    .column-skills li {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    .skill-icon {
+        margin-right: 0; /* Remove margin for skill icons on smaller screens */
+    }
+}
+
+/* Styles for Skills Section */
+#skills {
+    background-color: #f9f9f9;
+    padding: 20px;
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.column-programming-languages,
+.column-tools,
+.column-os {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.column-programming-languages h4,
+.column-tools h4,
+.column-os h4 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.column-programming-languages ul,
+.column-tools ul,
+.column-os ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.column-programming-languages li,
+.column-tools li,
+.column-os li {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #fff;
+     
+}
+
+.column-programming-languages .skill-icon,
+.column-tools .skill-icon,
+.column-os .skill-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #3498db;
+}
+
+.column-programming-languages .skill-text,
+.column-tools .skill-text,
+.column-os .skill-text {
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+    .column-programming-languages,
+    .column-tools,
+    .column-os {
+        max-height: none; /* Remove maximum height on smaller screens */
+        overflow-y: auto; /* Add a vertical scrollbar when needed */
+    }
+}
+
+
+#projects {
+    background-color: #f9f9f9;
+    padding: 20px;
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.project {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+    .project {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+}
+
+
+ 
+#certifications {
+    background-color: #f9f9f9;
+    padding: 20px;
+    overflow-y: auto; /* Add vertical scrollbar when content overflows */
+    max-height: 400px; /* Set a maximum height for the certifications section */
+}
+
+.certification {
+    margin-bottom: 0; /* Remove the margin between certifications */
+    padding: 15px; /* Reduce padding for certifications */
+}
+
+.certification h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 5px; /* Decrease the margin below h4 */
+}
+
+.certification p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+    .certification {
+        padding: 10px; /* Further reduce padding on smaller screens */
+    }
+}
+
+
+/* Add this CSS to style the Download Resume button */
+a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    padding: 10px 20px;
+     background-color:rgb(226, 110, 9);
+     color: #000000; /* Text color */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    
+}
+
+button:hover {
+    background-color: #ffffff; /* Hover background color */
+    color:#0368ff ;
+}
+
+/* Optional: Adjust button size and font */
+button {
+    font-size: 16px;
+     width: 150px;
+    height: 50px;
+    margin-bottom: 10px;
+}
